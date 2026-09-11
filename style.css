@@ -1,0 +1,364 @@
+/* ========================================================
+   ESTILOS GLOBAIS E VARIÁVEIS VISUAIS
+   ======================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --ink: #0d0d0d;
+  --charcoal: #1a1a1a;
+  --bone: #f2f0eb;
+  --bone-dim: #a8a8a4;
+  --rust: #f2f0eb;
+  --rust-bright: #ffffff;
+  --line: rgba(242, 240, 235, 0.18);
+  --gold: #d4af37;
+
+  /* Variáveis padrão do Bootstrap sobrescritas */
+  --bs-body-bg: var(--ink);
+  --bs-body-color: var(--bone);
+  --bs-border-color: var(--line);
+}
+
+body {
+  background: var(--ink);
+  color: var(--bone);
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1, h2, h3, .display-font {
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 0.95;
+}
+
+a {
+  color: inherit;
+}
+
+.text-dim { color: var(--bone-dim) !important; }
+.accent { color: var(--bone) !important; }
+.emphasis {
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-underline-offset: 8px;
+}
+.bg-charcoal { background: var(--charcoal) !important; }
+.border-line { border-color: var(--line) !important; }
+
+/* ========================================================
+   BARRA DE NAVEGAÇÃO (NAVBAR)
+   ======================================================== */
+.navbar {
+  background: rgba(20, 18, 16, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-family: 'Barlow Condensed', sans-serif; 
+  font-weight: 800;
+  font-size: 1.5rem; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--bone) !important;
+}
+
+.nav-link {
+  color: var(--bone-dim) !important; 
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--bone) !important;
+}
+
+/* ========================================================
+   BOTÕES E MICROINTERAÇÕES
+   ======================================================== */
+.btn-rust {
+  background: var(--rust-bright); 
+  border: 1px solid var(--rust-bright); 
+  color: var(--ink); 
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-rust:hover {
+  background: var(--bone); 
+  border-color: var(--bone); 
+  color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+.btn-outline-bone {
+  border: 1px solid var(--line); 
+  color: var(--bone);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-outline-bone:hover {
+  border-color: var(--bone); 
+  color: var(--bone); 
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+/* ========================================================
+   SEÇÃO HERO
+   ======================================================== */
+.hero {
+  min-height: 100vh;
+  display: flex; 
+  align-items: flex-end;
+  padding-top: 76px; 
+  padding-bottom: 6rem;
+  background:
+    linear-gradient(180deg, rgba(20, 18, 16, 0.4) 0%, rgba(20, 18, 16, 0.98) 90%),
+    repeating-linear-gradient(115deg, #1c1916 0 2px, #191713 2px 46px);
+}
+
+.hero h1 {
+  font-size: clamp(48px, 9vw, 118px);
+}
+
+.eyebrow {
+  font-size: 0.85rem; 
+  color: var(--bone-dim);
+}
+
+.eyebrow .dot {
+  width: 8px; 
+  height: 8px; 
+  background: #25d366; 
+  border-radius: 50%; 
+  display: inline-block; 
+  margin-right: 8px;
+  box-shadow: 0 0 8px #25d366;
+}
+
+/* ========================================================
+   SEÇÃO SERVIÇOS
+   ======================================================== */
+.service-row {
+  border-bottom: 1px solid var(--line); 
+  padding: 1.6rem 1rem;
+  border-radius: 6px;
+  transition: background 0.25s ease, padding-left 0.25s ease;
+}
+
+.service-row:hover {
+  background: rgba(242, 240, 235, 0.04);
+  padding-left: 1.4rem;
+}
+
+.service-row .num {
+  font-family: 'Barlow Condensed'; 
+  color: var(--rust-bright); 
+  font-weight: 600;
+}
+
+.service-row .price {
+  font-family: 'Barlow Condensed'; 
+  font-size: 1.7rem; 
+  font-weight: 700;
+  color: var(--bone);
+}
+
+/* ========================================================
+   GALERIA DE TRABALHOS
+   ======================================================== */
+.galeria-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #222;
+}
+
+.galeria-wrapper img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+.galeria-wrapper:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.08);
+}
+
+/* ========================================================
+   FORMULÁRIO, MAPA E CARTOES DE CONTATO
+   ======================================================== */
+.form-container {
+  background: #141414;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-control, .form-select {
+  background: transparent; 
+  border: none; 
+  border-bottom: 1px solid var(--line);
+  color: var(--bone); 
+  border-radius: 0; 
+  padding: 0.6rem 0.2rem;
+  transition: border-bottom-color 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  background: transparent; 
+  color: var(--bone); 
+  box-shadow: none; 
+  border-bottom-color: var(--rust-bright);
+}
+
+.form-select option {
+  background: var(--charcoal); 
+  color: var(--bone);
+}
+
+::placeholder {
+  color: var(--bone-dim); 
+  opacity: 0.6;
+}
+
+.form-label {
+  font-size: 0.8rem; 
+  color: var(--bone-dim); 
+  text-transform: uppercase; 
+  letter-spacing: 0.5px;
+}
+
+.alert-confirm {
+  background: rgba(37, 211, 102, 0.1); 
+  border: 1px solid rgba(37, 211, 102, 0.4); 
+  color: #25d366;
+  border-radius: 6px;
+}
+
+.info-pill {
+  background: rgba(242, 240, 235, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: background 0.2s ease;
+}
+
+.info-pill:hover {
+  background: rgba(242, 240, 235, 0.06);
+}
+
+.map-wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  height: 280px;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ========================================================
+   SEÇÃO DE AVALIAÇÕES
+   ======================================================== */
+.review-card {
+  background: var(--ink); 
+  border: 1px solid var(--line);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.review-card:hover {
+  border-color: rgba(242, 240, 235, 0.4);
+  transform: translateY(-3px);
+}
+
+.stars {
+  color: #f5b301; 
+  letter-spacing: 2px;
+}
+
+.star-input button {
+  background: none; 
+  border: 1px solid var(--line); 
+  color: var(--bone-dim); 
+  width: 2.4rem; 
+  height: 2.4rem;
+  transition: all 0.2s ease;
+}
+
+.star-input button.active {
+  border-color: #f5b301; 
+  color: #f5b301;
+  transform: scale(1.1);
+}
+
+/* ========================================================
+   BOTÃO FLUTUANTE DO WHATSAPP
+   ======================================================== */
+.whatsapp-float {
+  position: fixed; 
+  right: 22px; 
+  bottom: 22px; 
+  z-index: 60;
+  width: 56px; 
+  height: 56px; 
+  border-radius: 50%;
+  background: #25d366; 
+  color: #fff;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.12); 
+  color: #fff;
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-float svg {
+  width: 28px; 
+  height: 28px;
+}
+
+/* ========================================================
+   RODAPÉ E RESPONSIVIDADE
+   ======================================================== */
+footer {
+  background: var(--charcoal); 
+  border-top: 1px solid var(--line);
+}
+
+footer a {
+  color: var(--bone-dim); 
+  text-decoration: none; 
+  display: block; 
+  margin-bottom: 0.5rem; 
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--rust-bright);
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1.25rem;
+  }
+  .map-wrapper {
+    height: 220px;
+  }
+}
