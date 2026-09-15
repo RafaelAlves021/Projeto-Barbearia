@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barbearia do Feio — Magalhães Bastos, RJ</title>
 
-  <!-- ======================================================== -->
-  <!-- GOOGLE ANALYTICS 4 (gtag.js)                              -->
-  <!-- ======================================================== -->
+  <!-- Google Analytics 4 (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GWB6W8QBN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,12 +14,12 @@
     gtag('config', 'G-4GWB6W8QBN');
   </script>
 
-  <!-- Bibliotecas Externas: Bootstrap e Google Fonts -->
+  <!-- Bibliotecas Externas -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Folha de Estilos Customizada do Projeto -->
+  <!-- Estilos do Projeto -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,7 +31,7 @@
     </svg>
   </a>
 
-  <!-- Barra de Navegação Superior -->
+  <!-- Barra de Navegação -->
   <nav class="navbar navbar-expand-lg fixed-top py-3">
     <div class="container">
       <a class="navbar-brand" href="#top">Barbearia do Feio</a>
@@ -43,6 +41,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
         <ul class="navbar-nav align-items-lg-center gap-lg-4">
           <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planos">Planos Mensais</a></li>
           <li class="nav-item"><a class="nav-link" href="#trabalhos">Trabalhos</a></li>
           <li class="nav-item"><a class="nav-link" href="#agendar">Agendar</a></li>
           <li class="nav-item"><a class="nav-link" href="#avaliacoes">Avaliações</a></li>
@@ -52,7 +51,7 @@
     </div>
   </nav>
 
-  <!-- Seção Hero (Apresentação) -->
+  <!-- Seção Hero -->
   <section class="hero" id="top">
     <div class="container">
       <div class="row align-items-end gy-5">
@@ -62,7 +61,7 @@
           <p class="text-dim mt-4" style="max-width:420px;">Magalhães Bastos, RJ. Corte, barba e disfarce, com Matheus Luciano.</p>
           <div class="d-flex gap-3 mt-4 flex-wrap">
             <a href="#agendar" class="btn btn-rust px-4 py-3">Marcar horário</a>
-            <a href="#servicos" class="btn btn-outline-bone px-4 py-3">Ver serviços</a>
+            <a href="#planos" class="btn btn-outline-bone px-4 py-3">Conhecer planos</a>
           </div>
         </div>
         <div class="col-lg-4 border-start border-line ps-lg-4">
@@ -87,7 +86,7 @@
     </div>
   </section>
 
-  <!-- Seção de Serviços -->
+  <!-- Seção Serviços -->
   <section class="py-5 py-lg-6" id="servicos" style="padding-top:7rem; padding-bottom:7rem;">
     <div class="container">
       <div class="row align-items-end mb-5 gy-3">
@@ -95,7 +94,7 @@
           <h2 style="font-size:clamp(34px,5vw,52px);">Serviços</h2>
         </div>
         <div class="col-md-4 text-md-end text-dim small">
-          Valores de referência — a tabela final é ajustada com o barbeiro.
+          Valores avulsos de referência.
         </div>
       </div>
 
@@ -126,7 +125,26 @@
           <div class="col-auto price">R$ 80</div>
         </div>
       </div>
-      <p class="text-dim small fst-italic mt-3">*Preços genéricos — substituir pela tabela real da barbearia.</p>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- NOVA SEÇÃO: PLANOS MENSAIS (ASSINATURA)                  -->
+  <!-- ======================================================== -->
+  <section class="border-top border-line py-5 bg-charcoal" id="planos" style="padding-top:7rem; padding-bottom:7rem;">
+    <div class="container">
+      <div class="row align-items-end mb-5 gy-3">
+        <div class="col-md-8">
+          <div class="accent small fw-semibold text-uppercase mb-1">Clube de Assinatura</div>
+          <h2 style="font-size:clamp(34px,5vw,52px);">Planos Mensais</h2>
+        </div>
+        <div class="col-md-4 text-md-end text-dim small">
+          Corte sempre alinhado economizando todo mês.
+        </div>
+      </div>
+
+      <!-- Container onde o JavaScript injeta os planos dinamicamente -->
+      <div class="row g-4" id="planosContainer"></div>
     </div>
   </section>
 
@@ -161,7 +179,7 @@
     </div>
   </section>
 
-  <!-- Seção de Agendamento e Mapa -->
+  <!-- Seção Agendamento e Mapa -->
   <section class="bg-charcoal border-top border-line py-5" id="agendar" style="padding-top:5rem; padding-bottom:5rem;">
     <div class="container">
       <div class="text-center text-lg-start mb-4">
@@ -171,7 +189,6 @@
       </div>
 
       <div class="row gy-4 align-items-stretch">
-        <!-- Formulário de Agendamento -->
         <div class="col-lg-6 order-1 order-lg-2">
           <div class="form-container">
             <h3 class="fs-4 mb-4 text-uppercase">Preencha seus dados</h3>
@@ -213,7 +230,6 @@
           </div>
         </div>
 
-        <!-- Informações e Mapa -->
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-between">
           <div class="row g-2 mb-3">
             <div class="col-6">
@@ -254,7 +270,7 @@
     </div>
   </section>
 
-  <!-- Seção de Avaliações -->
+  <!-- Seção Avaliações -->
   <section class="py-5" id="avaliacoes" style="padding-top:7rem; padding-bottom:7rem;">
     <div class="container">
       <div class="row align-items-end mb-5 gy-3">
@@ -309,6 +325,7 @@
         <div class="col-6 col-lg-3">
           <h6 class="text-dim text-uppercase small mb-3">Navegação</h6>
           <a href="#servicos">Serviços</a>
+          <a href="#planos">Planos Mensais</a>
           <a href="#trabalhos">Trabalhos</a>
           <a href="#agendar">Agendar horário</a>
           <a href="#avaliacoes">Avaliações</a>
@@ -327,7 +344,41 @@
     </div>
   </footer>
 
-  <!-- Scripts: Bootstrap Bundle e o nosso Script Customizado -->
+  <!-- ======================================================== -->
+  <!-- MODAL DE ADESÃO AO PLANO MENSAL (Bootstrap 5)            -->
+  <!-- ======================================================== -->
+  <div class="modal fade" id="modalPlano" tabindex="-1" aria-labelledby="modalPlanoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-charcoal border border-line text-white">
+        <div class="modal-header border-bottom border-line">
+          <h5 class="modal-title display-font fs-4" id="modalPlanoLabel">Assinar Plano Mensal</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-dim small mb-4">Ao confirmar, o seu pedido será aberto diretamente no WhatsApp do barbeiro para ativar a sua assinatura.</p>
+          <form id="formAssinaturaPlano">
+            <div class="mb-3">
+              <label class="form-label">Plano Selecionado</label>
+              <input type="text" class="form-control fw-bold" id="inputPlanoNome" readonly>
+            </div>
+            <div class="mb-3">
+              <label for="inputAssinanteNome" class="form-label">Seu Nome</label>
+              <input type="text" class="form-control" id="inputAssinanteNome" required placeholder="Ex: Rodrigo Silva">
+            </div>
+            <div class="mb-4">
+              <label for="inputAssinanteTel" class="form-label">Seu WhatsApp</label>
+              <input type="tel" class="form-control" id="inputAssinanteTel" required placeholder="Ex: (21) 98888-7777">
+            </div>
+            <button type="submit" class="btn btn-rust w-100 py-3 text-uppercase fw-bold">
+              Confirmar e Chamar no WhatsApp ↗
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
