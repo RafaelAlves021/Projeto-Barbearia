@@ -1,444 +1,125 @@
-/* ========================================================
-   ESTILOS GLOBAIS E VARIÁVEIS VISUAIS
-   ======================================================== */
-html {
-  scroll-behavior: smooth;
-}
+/* Barbearia Real — preto e branco old school */
+:root{--k:#000;--w:#fafafa;--dim:#9a9a9a;--line:rgba(255,255,255,.22);--bs-body-bg:#000;--bs-body-color:#fafafa}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:'Work Sans',sans-serif;background:var(--k);color:var(--w)}
+h1,h2,h3,.brand-f,.navbar-brand{font-family:'Alfa Slab One',serif;font-weight:400;line-height:1}
+h2{font-size:clamp(34px,5vw,56px)}
+a{color:inherit}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.light :focus-visible{outline-color:#000}
+.dark{background:var(--k);color:var(--w)}
+.light{background:var(--w);color:var(--k)}
+.sec{padding:6rem 0}
+.sub{color:var(--dim)}
+.light .sub{color:#555}
+.k{font-weight:600;font-size:.8rem;color:var(--dim);margin-bottom:.35rem}
 
-:root {
-  --ink: #0d0d0d;
-  --charcoal: #1a1a1a;
-  --bone: #f2f0eb;
-  --bone-dim: #a8a8a4;
-  --rust: #f2f0eb;
-  --rust-bright: #ffffff;
-  --line: rgba(242, 240, 235, 0.18);
-  --gold: #d4af37;
+/* Botões */
+.btn{border-radius:0;font-weight:600;transition:transform .15s,background .15s,color .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-w{background:#fff;border:2px solid #fff;color:#000}
+.btn-w:hover{background:#000;color:#fff;border-color:#fff}
+.btn-o{border:2px solid #fff;color:#fff;background:transparent}
+.btn-o:hover{background:#fff;color:#000}
+.btn-k{background:#000;border:2px solid #000;color:#fff}
+.btn-k:hover{background:#fff;color:#000}
 
-  /* Variáveis do Bootstrap sobrescritas */
-  --bs-body-bg: var(--ink);
-  --bs-body-color: var(--bone);
-  --bs-border-color: var(--line);
-}
+/* Navbar */
+.navbar{background:#000!important;border-bottom:1px solid var(--line)}
+.navbar-brand{font-size:1.4rem;color:#fff!important}
+.nav-link{color:var(--dim)!important;font-size:.95rem}
+.nav-link:hover{color:#fff!important}
 
-body {
-  background: var(--ink);
-  color: var(--bone);
-  font-family: 'Work Sans', sans-serif;
-}
+/* Hero */
+.hero{padding:9rem 0 4rem}
+.hero h1{font-size:clamp(56px,12vw,160px);letter-spacing:-.01em;margin:1.2rem 0 1.5rem}
+.lead-txt{max-width:440px;color:#cfcfcf;font-size:1.15rem;margin-bottom:2rem}
+.status{display:inline-flex;align-items:center;gap:.6rem;border:1px solid var(--line);padding:.4rem .9rem;font-size:.9rem}
+.status i{width:9px;height:9px;border-radius:50%;background:#777}
+.status.on i{background:#25d366;box-shadow:0 0 8px #25d366}
+.info-strip{border-top:1px solid var(--line);padding-top:1.5rem;font-size:.95rem}
+.info-strip a{text-decoration:none}
+.info-strip a:hover{text-decoration:underline}
 
-h1, h2, h3, .display-font {
-  font-family: 'Barlow Condensed', sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  line-height: 0.95;
-}
+/* Poste de barbeiro (o destaque do site) */
+.stripes{background:linear-gradient(135deg,#fff 25%,#000 25%,#000 50%,#fff 50%,#fff 75%,#000 75%) 0 0/56px 56px;animation:spin 3s linear infinite}
+.pole{display:flex;flex-direction:column;align-items:center}
+.pole b{width:96px;height:22px;background:#fff;border-radius:6px}
+.tube{position:relative;width:76px;height:330px;border:3px solid #fff;overflow:hidden;border-radius:6px;background:linear-gradient(135deg,#fff 25%,#000 25%,#000 50%,#fff 50%,#fff 75%,#000 75%) 0 0/56px 56px;animation:spin 3s linear infinite}
+.tube::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.6),transparent 30%,rgba(255,255,255,.28) 45%,transparent 60%,rgba(0,0,0,.65))}
+.pole-line{height:12px;background:linear-gradient(135deg,#fff 25%,#000 25%,#000 50%,#fff 50%,#fff 75%,#000 75%) 0 0/24px 24px;animation:slide 1.5s linear infinite;border:1px solid #fff}
+@keyframes spin{to{background-position:0 56px}}
+@keyframes slide{to{background-position:24px 0}}
 
-a {
-  color: inherit;
-}
+/* Tabela de preços (estilo da tabela impressa) */
+.board{list-style:none;margin:0;padding:0;border-top:3px solid #000}
+.board a{display:flex;align-items:baseline;padding:1.1rem .75rem;text-decoration:none;border-bottom:1px solid #000;font-size:1.2rem;font-weight:500;transition:background .15s,color .15s,padding .15s}
+.board a:hover{background:#000;color:#fff;padding-left:1.25rem}
+.board small{font-size:.8rem;font-weight:400;opacity:.65;margin-left:.4rem}
+.board i{flex:1;border-bottom:3px dotted currentColor;margin:0 .8rem;opacity:.45;transform:translateY(-.3rem)}
+.board b{font-size:1.5rem;font-weight:700}
 
-.text-dim { color: var(--bone-dim) !important; }
-.accent { color: var(--bone) !important; }
-.emphasis {
-  text-decoration: underline;
-  text-decoration-thickness: 6px;
-  text-underline-offset: 8px;
-}
-.bg-charcoal { background: var(--charcoal) !important; }
-.border-line { border-color: var(--line) !important; }
+/* Planos */
+.plan{position:relative;height:100%;display:flex;flex-direction:column;border:2px solid #fff;padding:2.2rem 1.8rem}
+.plan h3{font-size:1.8rem}
+.plan .pr{font-size:3rem;font-weight:700;line-height:1;margin-top:1rem}
+.plan .pr small{font-size:1rem;font-weight:400;opacity:.7}
+.plan .pr .ap{display:block;font-size:.85rem;margin-bottom:.3rem}
+.plan .avulso{font-size:.85rem;opacity:.7;margin-top:.6rem}
+.plan ul{list-style:none;padding:0;margin:1.5rem 0 2rem;flex:1}
+.plan li{padding:.7rem 0;border-bottom:1px dashed rgba(255,255,255,.25);font-size:.95rem}
+.plan li::before{content:"✓";margin-right:.6rem;font-weight:700}
+.plan.top{background:#fff;color:#000}
+.plan.top li{border-color:rgba(0,0,0,.25)}
+.tag{position:absolute;top:-1px;right:-1px;background:#000;color:#fff;font-size:.8rem;font-weight:600;padding:.4rem .9rem;border:2px solid #fff}
 
-/* ========================================================
-   BARRA DE NAVEGAÇÃO (NAVBAR)
-   ======================================================== */
-.navbar {
-  background: rgba(20, 18, 16, 0.95) !important;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-  transition: all 0.3s ease;
-}
+/* Galeria */
+.galeria img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#222;border:3px solid #000;filter:grayscale(.2)}
 
-.navbar-brand {
-  font-family: 'Barlow Condensed', sans-serif; 
-  font-weight: 800;
-  font-size: 1.5rem; 
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--bone) !important;
-}
+/* Formulários */
+.form-box{border:2px solid #fff;padding:2rem}
+.form-control,.form-select{background:transparent;border:0;border-bottom:2px solid var(--line);border-radius:0;color:inherit;padding:.6rem .2rem}
+.form-control:focus,.form-select:focus{background:transparent;color:inherit;box-shadow:none;border-color:#fff}
+.form-select option{background:#111;color:#fff}
+.form-label{font-size:.85rem;color:var(--dim)}
+.light .form-label{color:#555}
+.light .form-control{border-color:rgba(0,0,0,.3)}
+.light .form-control:focus{border-color:#000}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:.5rem}
+.slots button{background:transparent;border:1px solid var(--line);color:#fff;padding:.55rem 0;font-weight:500;transition:background .15s,color .15s}
+.slots button:hover:not(:disabled){border-color:#fff}
+.slots button.on{background:#fff;color:#000;border-color:#fff}
+.slots button:disabled{opacity:.3;text-decoration:line-through;cursor:not-allowed}
+.total{font-size:1.1rem;font-weight:600}
+.alert-confirm{border:2px solid #25d366;color:#25d366;padding:.8rem 1rem}
+.info-pill{border:1px solid var(--line);padding:1rem}
+.map-wrapper{height:300px;border:2px solid #fff;overflow:hidden}
+.map-wrapper iframe{width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(.9)}
 
-.nav-link {
-  color: var(--bone-dim) !important; 
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
-}
+/* Avaliações */
+.rev{border:2px solid #000;padding:1.3rem;height:100%}
+.rev .stars{display:block;margin-bottom:.5rem}
+.stars{letter-spacing:2px;font-size:1.3rem}
+.rev-form{border-top:3px solid #000;padding-top:2.5rem}
+.star-input button{width:2.6rem;height:2.6rem;background:transparent;border:2px solid #000;color:#777;font-size:1.1rem}
+.star-input button.active{background:#000;color:#fff}
 
-.nav-link:hover {
-  color: var(--bone) !important;
-}
+/* WhatsApp, rodapé, modal */
+.whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.4);transition:transform .2s}
+.whatsapp-float:hover{transform:scale(1.1);color:#fff}
+.whatsapp-float svg{width:28px;height:28px}
+.checker{height:24px;background:repeating-conic-gradient(#fff 0 25%,#000 0 50%) 0 0/24px 24px}
+.brand-f{font-size:2rem}
+footer a{display:block;color:var(--dim);text-decoration:none;margin-bottom:.5rem}
+footer a:hover{color:#fff}
+.foot-line{border-top:1px solid var(--line)}
+.modal-content{background:#000;border:2px solid #fff;border-radius:0;color:#fff}
+.modal-title{font-family:'Alfa Slab One',serif;font-weight:400}
 
-/* ========================================================
-   BOTÕES E MICROINTERAÇÕES
-   ======================================================== */
-.btn-rust {
-  background: var(--rust-bright); 
-  border: 1px solid var(--rust-bright); 
-  color: var(--ink); 
-  font-weight: 600;
-  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-}
+@media(max-width:768px){.sec{padding:4rem 0}.hero{padding-top:7.5rem}.form-box{padding:1.25rem}.map-wrapper{height:230px}.board a{font-size:1rem}}
+@media(prefers-reduced-motion:reduce){.tube,.pole-line,html{animation:none;scroll-behavior:auto}.btn,.board a{transition:none}}
 
-.btn-rust:hover {
-  background: var(--bone); 
-  border-color: var(--bone); 
-  color: var(--ink);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
-}
-
-.btn-outline-bone {
-  border: 1px solid var(--line); 
-  color: var(--bone);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.btn-outline-bone:hover {
-  border-color: var(--bone); 
-  color: var(--bone); 
-  background: rgba(255, 255, 255, 0.05);
-  transform: translateY(-2px);
-}
-
-/* ========================================================
-   SEÇÃO HERO
-   ======================================================== */
-.hero {
-  min-height: 100vh;
-  display: flex; 
-  align-items: flex-end;
-  padding-top: 76px; 
-  padding-bottom: 6rem;
-  background:
-    linear-gradient(180deg, rgba(20, 18, 16, 0.4) 0%, rgba(20, 18, 16, 0.98) 90%),
-    repeating-linear-gradient(115deg, #1c1916 0 2px, #191713 2px 46px);
-}
-
-.hero h1 {
-  font-size: clamp(48px, 9vw, 118px);
-}
-
-.eyebrow {
-  font-size: 0.85rem; 
-  color: var(--bone-dim);
-}
-
-.eyebrow .dot {
-  width: 8px; 
-  height: 8px; 
-  background: #25d366; 
-  border-radius: 50%; 
-  display: inline-block; 
-  margin-right: 8px;
-  box-shadow: 0 0 8px #25d366;
-}
-
-/* ========================================================
-   SEÇÃO SERVIÇOS
-   ======================================================== */
-.service-row {
-  border-bottom: 1px solid var(--line); 
-  padding: 1.6rem 1rem;
-  border-radius: 6px;
-  transition: background 0.25s ease, padding-left 0.25s ease;
-}
-
-.service-row:hover {
-  background: rgba(242, 240, 235, 0.04);
-  padding-left: 1.4rem;
-}
-
-.service-row .num {
-  font-family: 'Barlow Condensed'; 
-  color: var(--rust-bright); 
-  font-weight: 600;
-}
-
-.service-row .price {
-  font-family: 'Barlow Condensed'; 
-  font-size: 1.7rem; 
-  font-weight: 700;
-  color: var(--bone);
-}
-
-/* ========================================================
-   PLANOS MENSAIS (CARDS DE ASSINATURA)
-   ======================================================== */
-.card-plano {
-  background: #121212;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 2.2rem 1.8rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  position: relative;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card-plano:hover {
-  transform: translateY(-6px);
-  border-color: rgba(242, 240, 235, 0.45);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
-}
-
-.card-plano.destaque {
-  border: 2px solid var(--bone);
-  background: #161616;
-}
-
-.badge-destaque {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--rust-bright);
-  color: var(--ink);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 4px 14px;
-  border-radius: 20px;
-  letter-spacing: 1px;
-}
-
-.preco-plano {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.preco-plano span {
-  font-size: 1rem;
-  font-family: 'Work Sans', sans-serif;
-  color: var(--bone-dim);
-  font-weight: 400;
-}
-
-.beneficios-plano {
-  list-style: none;
-  padding-left: 0;
-  margin: 1.5rem 0 2rem 0;
-}
-
-.beneficios-plano li {
-  padding: 8px 0;
-  font-size: 0.95rem;
-  color: var(--bone-dim);
-  border-bottom: 1px dashed rgba(242, 240, 235, 0.08);
-}
-
-.beneficios-plano li::before {
-  content: "✓";
-  color: #25d366;
-  font-weight: bold;
-  margin-right: 8px;
-}
-
-/* ========================================================
-   GALERIA COM PROTEÇÃO VISUAL CONTRA FALHAS
-   ======================================================== */
-.galeria-wrapper {
-  overflow: hidden;
-  border-radius: 8px;
-  border: 1px solid var(--line);
-  background: linear-gradient(135deg, #1f1f1f 0%, #141414 100%);
-  position: relative;
-}
-
-.galeria-wrapper img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-}
-
-.galeria-wrapper:hover img {
-  transform: scale(1.06);
-  filter: brightness(1.08);
-}
-
-/* ========================================================
-   FORMULÁRIO, MAPA E CARTÕES DE CONTATO
-   ======================================================== */
-.form-container {
-  background: #141414;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.form-control, .form-select {
-  background: transparent; 
-  border: none; 
-  border-bottom: 1px solid var(--line);
-  color: var(--bone); 
-  border-radius: 0; 
-  padding: 0.6rem 0.2rem;
-  transition: border-bottom-color 0.2s ease;
-}
-
-.form-control:focus, .form-select:focus {
-  background: transparent; 
-  color: var(--bone); 
-  box-shadow: none; 
-  border-bottom-color: var(--rust-bright);
-}
-
-.form-select option {
-  background: var(--charcoal); 
-  color: var(--bone);
-}
-
-::placeholder {
-  color: var(--bone-dim); 
-  opacity: 0.6;
-}
-
-.form-label {
-  font-size: 0.8rem; 
-  color: var(--bone-dim); 
-  text-transform: uppercase; 
-  letter-spacing: 0.5px;
-}
-
-.alert-confirm {
-  background: rgba(37, 211, 102, 0.1); 
-  border: 1px solid rgba(37, 211, 102, 0.4); 
-  color: #25d366;
-  border-radius: 6px;
-}
-
-.info-pill {
-  background: rgba(242, 240, 235, 0.03);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 1rem;
-  transition: background 0.2s ease;
-}
-
-.info-pill:hover {
-  background: rgba(242, 240, 235, 0.06);
-}
-
-.map-wrapper {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  height: 280px;
-}
-
-.map-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* ========================================================
-   SEÇÃO DE AVALIAÇÕES
-   ======================================================== */
-.review-card {
-  background: var(--ink); 
-  border: 1px solid var(--line);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.review-card:hover {
-  border-color: rgba(242, 240, 235, 0.4);
-  transform: translateY(-3px);
-}
-
-.stars {
-  color: #f5b301; 
-  letter-spacing: 2px;
-}
-
-.star-input button {
-  background: none; 
-  border: 1px solid var(--line); 
-  color: var(--bone-dim); 
-  width: 2.4rem; 
-  height: 2.4rem;
-  transition: all 0.2s ease;
-}
-
-.star-input button.active {
-  border-color: #f5b301; 
-  color: #f5b301;
-  transform: scale(1.1);
-}
-
-/* ========================================================
-   BOTÃO FLUTUANTE DO WHATSAPP
-   ======================================================== */
-.whatsapp-float {
-  position: fixed; 
-  right: 22px; 
-  bottom: 22px; 
-  z-index: 60;
-  width: 56px; 
-  height: 56px; 
-  border-radius: 50%;
-  background: #25d366; 
-  color: #fff;
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.12); 
-  color: #fff;
-  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
-}
-
-.whatsapp-float svg {
-  width: 28px; 
-  height: 28px;
-}
-
-/* ========================================================
-   RODAPÉ E RESPONSIVIDADE MOBILE
-   ======================================================== */
-footer {
-  background: var(--charcoal); 
-  border-top: 1px solid var(--line);
-}
-
-footer a {
-  color: var(--bone-dim); 
-  text-decoration: none; 
-  display: block; 
-  margin-bottom: 0.5rem; 
-  transition: color 0.2s;
-}
-
-footer a:hover {
-  color: var(--rust-bright);
-}
-
-@media (max-width: 768px) {
-  .form-container {
-    padding: 1.25rem;
-  }
-  .map-wrapper {
-    height: 220px;
-  }
-}
+/* Ajustes: placeholder legível no fundo preto e aviso de horários em linha inteira */
+.dark ::placeholder{color:#8a8a8a;opacity:1}
+.slots p{grid-column:1/-1}
+.light .alert-confirm{color:#0a7a35;border-color:#0a7a35}

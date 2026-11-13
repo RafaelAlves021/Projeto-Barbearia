@@ -3,21 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barbearia do Feio — Magalhães Bastos, RJ</title>
-
-  <!-- ======================================================== -->
-  <!-- 1. META TAGS DE SEO E COMPARTILHAMENTO (OPEN GRAPH)       -->
-  <!-- ======================================================== -->
-  <meta name="description" content="Barbearia do Feio em Magalhães Bastos, RJ. Corte, barba e disfarce com Matheus Luciano. Agende online pelo WhatsApp.">
+  <title>Barbearia Real — Magalhães Bastos, RJ</title>
+  <meta name="description" content="Barbearia Real em Magalhães Bastos, RJ. Corte, barba e disfarce com Matheus Luciano. Agende online pelo WhatsApp.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Barbearia do Feio — Magalhães Bastos, RJ">
-  <meta property="og:description" content="Corte, barba e disfarce no padrão da casa. Agende seu horário ou assine nosso clube mensal.">
+  <meta property="og:title" content="Barbearia Real — Magalhães Bastos, RJ">
+  <meta property="og:description" content="Corte, barba e disfarce no padrão da casa. Agende seu horário ou assine nosso plano mensal.">
   <meta property="og:image" content="img/corte-01.jpg">
-  <meta property="og:url" content="https://barbeariadofeio.com.br">
+  <meta property="og:url" content="https://barbeariareal.com.br">
 
-  <!-- ======================================================== -->
-  <!-- 2. GOOGLE ANALYTICS 4 (gtag.js)                           -->
-  <!-- ======================================================== -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GWB6W8QBN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -26,472 +19,256 @@
     gtag('config', 'G-4GWB6W8QBN');
   </script>
 
-  <!-- ======================================================== -->
-  <!-- 3. BIBLIOTECAS EXTERNAS E ESTILOS                        -->
-  <!-- ======================================================== -->
-  <!-- Bootstrap 5 CSS para grid e componentes responsivos -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Fontes Tipográficas: Barlow Condensed e Work Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Arquivo de Estilo Customizado -->
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ======================================================== -->
-  <!-- BOTÃO FLUTUANTE DO WHATSAPP                              -->
-  <!-- ======================================================== -->
-  <a id="whatsappFloatBtn" href="https://wa.me/5521990357750" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chamar no WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2zm5.79 14.06c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.17-1.56-1.17-2.98 0-1.42.74-2.11 1-2.4.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.28.36-.23.6-.14.24.09 1.53.72 1.79.85.26.13.43.19.5.3.07.11.07.62-.17 1.3z"/>
-    </svg>
+  <a href="https://wa.me/5521990357750" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chamar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2zm5.79 14.06c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.17-1.56-1.17-2.98 0-1.42.74-2.11 1-2.4.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.28.36-.23.6-.14.24.09 1.53.72 1.79.85.26.13.43.19.5.3.07.11.07.62-.17 1.3z"/></svg>
   </a>
 
-  <!-- ======================================================== -->
-  <!-- BARRA DE NAVEGAÇÃO SUPERIOR                              -->
-  <!-- ======================================================== -->
   <nav class="navbar navbar-expand-lg fixed-top py-3">
     <div class="container">
-      <a class="navbar-brand" href="#top">Barbearia do Feio</a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" style="filter:invert(1)">
+      <a class="navbar-brand" href="#top">Barbearia Real</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Abrir menu" style="filter:invert(1)">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
         <ul class="navbar-nav align-items-lg-center gap-lg-4">
-          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-          <li class="nav-item"><a class="nav-link" href="#planos">Planos Mensais</a></li>
+          <li class="nav-item"><a class="nav-link" href="#precos">Preços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
           <li class="nav-item"><a class="nav-link" href="#trabalhos">Trabalhos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#agendar">Agendar</a></li>
           <li class="nav-item"><a class="nav-link" href="#avaliacoes">Avaliações</a></li>
-          <li class="nav-item mt-2 mt-lg-0"><a class="btn btn-outline-bone btn-sm" href="#agendar">Marcar horário</a></li>
+          <li class="nav-item mt-2 mt-lg-0"><a class="btn btn-w btn-sm px-3" href="#agendar">Agendar horário</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ======================================================== -->
-  <!-- SEÇÃO HERO (APRESENTAÇÃO)                                -->
-  <!-- ======================================================== -->
-  <section class="hero" id="top">
+  <!-- HERO -->
+  <header class="hero dark" id="top">
     <div class="container">
       <div class="row align-items-end gy-5">
+        <div class="col-lg-9">
+          <span class="status" id="statusLoja"><i></i><span id="statusTxt">Verificando horário</span></span>
+          <h1>Barbearia<br>Real</h1>
+          <p class="lead-txt">Corte, barba e disfarce com Matheus Luciano, em Magalhães Bastos.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#agendar" class="btn btn-w px-4 py-3">Agendar horário</a>
+            <a href="#planos" class="btn btn-o px-4 py-3">Ver planos mensais</a>
+          </div>
+        </div>
+        <div class="col-lg-3 d-none d-lg-flex justify-content-end" aria-hidden="true">
+          <div class="pole"><b></b><div class="tube"></div><b></b></div>
+        </div>
+      </div>
+      <div class="pole-line mt-5" aria-hidden="true"></div>
+      <div class="row g-4 info-strip">
+        <div class="col-6 col-md-3"><div class="k">Endereço</div>Rua Castanheiro, 46<br>Magalhães Bastos, RJ</div>
+        <div class="col-6 col-md-3"><div class="k">Horário</div>Terça a sábado<br>09h às 19h</div>
+        <div class="col-6 col-md-3"><div class="k">WhatsApp</div><a href="https://wa.me/5521990357750" target="_blank" rel="noopener">(21) 99035-7750</a></div>
+        <div class="col-6 col-md-3"><div class="k">Instagram</div><a href="https://www.instagram.com/matheus_lucianoo21/" target="_blank" rel="noopener">@matheus_lucianoo21</a></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TABELA DE PREÇOS -->
+  <section class="sec light" id="precos">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-lg-4">
+          <h2>Tabela de preços</h2>
+          <p class="mt-3 sub">Toque em um serviço para já escolher na hora de agendar.</p>
+        </div>
         <div class="col-lg-8">
-          <div class="eyebrow mb-4"><span class="dot"></span>Magalhães Bastos · Zona Oeste, RJ</div>
-          <h1>Barbearia<br>do <span class="accent emphasis">Feio</span></h1>
-          <p class="text-dim mt-4" style="max-width:420px;">Magalhães Bastos, RJ. Corte, barba e disfarce, com Matheus Luciano.</p>
-          <div class="d-flex gap-3 mt-4 flex-wrap">
-            <a href="#agendar" class="btn btn-rust px-4 py-3">Marcar horário</a>
-            <a href="#planos" class="btn btn-outline-bone px-4 py-3">Conhecer planos</a>
-          </div>
-        </div>
-        <div class="col-lg-4 border-start border-line ps-lg-4">
-          <div class="mb-3">
-            <div class="fw-semibold">Endereço</div>
-            <div class="text-dim small">Rua Castanheiro, 46 — Magalhães Bastos, RJ</div>
-          </div>
-          <div class="mb-3">
-            <div class="fw-semibold">Horário</div>
-            <div class="text-dim small">Terça a sábado, 09h às 19h</div>
-          </div>
-          <div class="mb-3">
-            <div class="fw-semibold">WhatsApp</div>
-            <div class="text-dim small">(21) 99035-7750</div>
-          </div>
-          <div>
-            <div class="fw-semibold">Instagram</div>
-            <div class="text-dim small">@matheus_lucianoo21</div>
-          </div>
+          <ul class="board">
+            <li><a href="#agendar" data-servico="Raspagem completa na gilete" data-preco="20"><span>Raspagem completa na gilete</span><i></i><b>R$ 20</b></a></li>
+            <li><a href="#agendar" data-servico="Corte simples (máquina)" data-preco="30"><span>Corte simples (máquina)</span><i></i><b>R$ 30</b></a></li>
+            <li><a href="#agendar" data-servico="Corte social" data-preco="35"><span>Corte social</span><i></i><b>R$ 35</b></a></li>
+            <li><a href="#agendar" data-servico="Corte disfarçado" data-preco="40"><span>Corte disfarçado <small>degradê / fade</small></span><i></i><b>R$ 40</b></a></li>
+            <li><a href="#agendar" data-servico="Corte disfarçado + sobrancelha" data-preco="45"><span>Corte disfarçado + sobrancelha</span><i></i><b>R$ 45</b></a></li>
+            <li><a href="#agendar" data-servico="Corte + barba" data-preco="60"><span>Corte + barba</span><i></i><b>R$ 60</b></a></li>
+            <li><a href="#agendar" data-servico="Corte + reflexo (nevou)" data-preco="120"><span>Corte + reflexo <small>nevou</small></span><i></i><b>R$ 120</b></a></li>
+            <li><a href="#agendar" data-servico="Acabamento (pezinho)" data-preco="10"><span>Acabamento (pezinho)</span><i></i><b>R$ 10</b></a></li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======================================================== -->
-  <!-- SEÇÃO DE SERVIÇOS AVULSOS                                -->
-  <!-- ======================================================== -->
-  <section class="py-5 py-lg-6" id="servicos" style="padding-top:7rem; padding-bottom:7rem;">
+  <!-- PLANOS -->
+  <section class="sec dark" id="planos">
     <div class="container">
       <div class="row align-items-end mb-5 gy-3">
-        <div class="col-md-8">
-          <h2 style="font-size:clamp(34px,5vw,52px);">Serviços</h2>
-        </div>
-        <div class="col-md-4 text-md-end text-dim small">
-          Valores avulsos de referência.
-        </div>
+        <div class="col-md-7"><h2>Planos mensais</h2></div>
+        <div class="col-md-5 sub text-md-end">Assinante paga menos que no avulso e tem agendamento prioritário.</div>
       </div>
-
-      <div class="border-top border-line">
-        <div class="row service-row align-items-baseline g-3">
-          <div class="col-auto num">01</div>
-          <div class="col"><div class="fs-4 fw-semibold">Corte</div><div class="text-dim small">Do clássico ao disfarce, no padrão da casa</div></div>
-          <div class="col-auto price">R$ 35</div>
-        </div>
-        <div class="row service-row align-items-baseline g-3">
-          <div class="col-auto num">02</div>
-          <div class="col"><div class="fs-4 fw-semibold">Barba</div><div class="text-dim small">Modelagem e navalha</div></div>
-          <div class="col-auto price">R$ 25</div>
-        </div>
-        <div class="row service-row align-items-baseline g-3">
-          <div class="col-auto num">03</div>
-          <div class="col"><div class="fs-4 fw-semibold">Corte + Barba</div><div class="text-dim small">Combo completo</div></div>
-          <div class="col-auto price">R$ 55</div>
-        </div>
-        <div class="row service-row align-items-baseline g-3">
-          <div class="col-auto num">04</div>
-          <div class="col"><div class="fs-4 fw-semibold">Sobrancelha</div><div class="text-dim small">Na navalha ou na pinça</div></div>
-          <div class="col-auto price">R$ 15</div>
-        </div>
-        <div class="row service-row align-items-baseline g-3">
-          <div class="col-auto num">05</div>
-          <div class="col"><div class="fs-4 fw-semibold">Nevou</div><div class="text-dim small">Descoloração e tonalização</div></div>
-          <div class="col-auto price">R$ 80</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================================================== -->
-  <!-- SEÇÃO DE PLANOS MENSAIS (CARDS DIRETOS NO HTML)          -->
-  <!-- ======================================================== -->
-  <section class="border-top border-line py-5 bg-charcoal" id="planos" style="padding-top:7rem; padding-bottom:7rem;">
-    <div class="container">
-      <div class="row align-items-end mb-5 gy-3">
-        <div class="col-md-8">
-          <div class="accent small fw-semibold text-uppercase mb-1">Clube de Assinatura</div>
-          <h2 style="font-size:clamp(34px,5vw,52px);">Planos Mensais</h2>
-        </div>
-        <div class="col-md-4 text-md-end text-dim small">
-          Corte sempre alinhado economizando todo mês.
-        </div>
-      </div>
-
-      <!-- 3 Cartões de Planos organizados em colunas -->
       <div class="row g-4">
-        
-        <!-- Plano 1: Barba Club -->
         <div class="col-lg-4">
-          <div class="card-plano">
-            <div>
-              <h3 class="fs-4 mb-2">Barba Club</h3>
-              <div class="preco-plano">R$ 60<span> /mês</span></div>
-              <ul class="beneficios-plano">
-                <li>Barba feita com toalha quente e navalha</li>
-                <li>Até 4 visitas por mês (1 por semana)</li>
-                <li>Hidratação e alinhamento inclusos</li>
-                <li>Prioridade no agendamento</li>
-              </ul>
-            </div>
-            <button 
-              type="button" 
-              class="btn btn-outline-bone w-100 py-3 text-uppercase fw-bold btn-assinar-plano"
-              data-plano-nome="Barba Club"
-              data-plano-preco="R$ 60">
-              Assinar Plano
-            </button>
+          <div class="plan">
+            <h3>Essencial</h3>
+            <div class="pr">R$ 100<small>/mês</small></div>
+            <div class="avulso">No avulso: R$ 140 (4 cortes sociais)</div>
+            <ul><li>4 cortes tradicionais por mês</li><li>Corte social</li><li>Agendamento prioritário</li></ul>
+            <button type="button" class="btn btn-o w-100 py-3 btn-assinar-plano" data-plano-nome="Essencial" data-plano-preco="R$ 100">Assinar plano</button>
           </div>
         </div>
-
-        <!-- Plano 2: Combo VIP (Mais Escolhido) -->
         <div class="col-lg-4">
-          <div class="card-plano destaque">
-            <div class="badge-destaque">Mais Escolhido</div>
-            <div>
-              <h3 class="fs-4 mb-2">Combo VIP (Cabelo + Barba)</h3>
-              <div class="preco-plano">R$ 110<span> /mês</span></div>
-              <ul class="beneficios-plano">
-                <li>Cabelo e Barba ilimitados no mês</li>
-                <li>Acabamento e pezinho sempre alinhados</li>
-                <li>Toalha quente e finalização com pomada</li>
-                <li>Bebida de cortesia a cada visita</li>
-                <li>Prioridade máxima na agenda</li>
-              </ul>
-            </div>
-            <button 
-              type="button" 
-              class="btn btn-rust w-100 py-3 text-uppercase fw-bold btn-assinar-plano"
-              data-plano-nome="Combo VIP (Cabelo + Barba)"
-              data-plano-preco="R$ 110">
-              Assinar Plano
-            </button>
+          <div class="plan">
+            <h3>Disfarce</h3>
+            <div class="pr"><small class="ap">a partir de</small> R$ 120<small>/mês</small></div>
+            <div class="avulso">No avulso: R$ 160 (4 cortes disfarçados)</div>
+            <ul><li>4 cortes com degradê por mês</li><li>Agendamento prioritário</li><li>Acabamento de barba (pescoço e contornos)</li></ul>
+            <button type="button" class="btn btn-o w-100 py-3 btn-assinar-plano" data-plano-nome="Disfarce" data-plano-preco="R$ 120">Assinar plano</button>
           </div>
         </div>
-
-        <!-- Plano 3: Corte Master -->
         <div class="col-lg-4">
-          <div class="card-plano">
-            <div>
-              <h3 class="fs-4 mb-2">Corte Master</h3>
-              <div class="preco-plano">R$ 70<span> /mês</span></div>
-              <ul class="beneficios-plano">
-                <li>Corte de cabelo e disfarce no padrão da casa</li>
-                <li>Até 4 cortes no mês (1 por semana)</li>
-                <li>Pezinho e sobrancelha inclusos</li>
-                <li>Desconto em produtos capilares</li>
-              </ul>
-            </div>
-            <button 
-              type="button" 
-              class="btn btn-outline-bone w-100 py-3 text-uppercase fw-bold btn-assinar-plano"
-              data-plano-nome="Corte Master"
-              data-plano-preco="R$ 70">
-              Assinar Plano
-            </button>
+          <div class="plan top">
+            <span class="tag">Mais completo</span>
+            <h3>Premium</h3>
+            <div class="pr">R$ 180<small>/mês</small></div>
+            <div class="avulso">No avulso: R$ 240 (4× corte + barba)</div>
+            <ul><li>4 cortes por mês (tradicional ou degradê)</li><li>4 aparos de barba</li><li>Agendamento prioritário</li></ul>
+            <button type="button" class="btn btn-k w-100 py-3 btn-assinar-plano" data-plano-nome="Premium" data-plano-preco="R$ 180">Assinar plano</button>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ======================================================== -->
-  <!-- SEÇÃO GALERIA DE TRABALHOS                               -->
-  <!-- ======================================================== -->
-  <section class="border-top border-line py-5" id="trabalhos" style="padding-top:7rem; padding-bottom:7rem;">
+  <!-- TRABALHOS -->
+  <section class="sec light" id="trabalhos">
     <div class="container">
       <div class="row align-items-end mb-5 gy-3">
-        <div class="col-md-8">
-          <h2 style="font-size:clamp(34px,5vw,52px);">Trabalhos</h2>
-        </div>
-        <div class="col-md-4 text-md-end text-dim small">
-          Direto do dia a dia da barbearia.
-        </div>
+        <div class="col-md-7"><h2>Trabalhos</h2></div>
+        <div class="col-md-5 sub text-md-end">Direto da cadeira, sem filtro.</div>
       </div>
-      <div class="row g-3">
-        <div class="col-6 col-md-4">
-          <div class="galeria-wrapper">
-            <img src="img/corte-01.jpg" alt="Disfarce feito na Barbearia do Feio" class="w-100 h-100" loading="lazy">
-          </div>
-        </div>
-        <div class="col-6 col-md-4">
-          <div class="galeria-wrapper">
-            <img src="img/corte-02.jpg" alt="Corte com disfarce na navalha" class="w-100 h-100" loading="lazy">
-          </div>
-        </div>
-        <div class="col-6 col-md-4 mx-auto">
-          <div class="galeria-wrapper">
-            <img src="img/corte-03.jpg" alt="Corte com pigmentação" class="w-100 h-100" loading="lazy">
-          </div>
-        </div>
+      <div class="row g-3 galeria">
+        <div class="col-md-6"><img src="img/corte-01.jpg" alt="Disfarce feito na Barbearia Real" loading="lazy"></div>
+        <div class="col-6 col-md-3 pt-md-5"><img src="img/corte-02.jpg" alt="Corte com disfarce na navalha" loading="lazy"></div>
+        <div class="col-6 col-md-3"><img src="img/corte-03.jpg" alt="Corte com pigmentação" loading="lazy"></div>
       </div>
     </div>
   </section>
 
-  <!-- ======================================================== -->
-  <!-- SEÇÃO AGENDAMENTO & LOCALIZAÇÃO                          -->
-  <!-- ======================================================== -->
-  <section class="bg-charcoal border-top border-line py-5" id="agendar" style="padding-top:5rem; padding-bottom:5rem;">
+  <!-- AGENDAMENTO -->
+  <section class="sec dark" id="agendar">
     <div class="container">
-      <div class="text-center text-lg-start mb-4">
-        <div class="accent small fw-semibold text-uppercase mb-1">Agendamento & Localização</div>
-        <h2 style="font-size:clamp(34px,5vw,52px);">Garanta sua cadeira</h2>
-        <p class="text-dim" style="max-width:500px;">Escolha o serviço, dia e hora. Rápido, direto e confirmado na hora pelo WhatsApp.</p>
-      </div>
-
-      <div class="row gy-4 align-items-stretch">
-        <!-- Formulário de Agendamento -->
-        <div class="col-lg-6 order-1 order-lg-2">
-          <div class="form-container">
-            <h3 class="fs-4 mb-4 text-uppercase">Preencha seus dados</h3>
-            <form id="bookingForm">
-              <div class="mb-3">
-                <label for="nome" class="form-label">Seu Nome</label>
-                <input type="text" class="form-control" id="nome" required placeholder="Ex: Lucas Pereira">
-              </div>
-              <div class="row g-3 mb-3">
-                <div class="col-sm-6">
-                  <label for="servico" class="form-label">Serviço</label>
-                  <select id="servico" class="form-select" required>
-                    <option value="">Selecione...</option>
-                    <option>Corte</option>
-                    <option>Barba</option>
-                    <option>Corte + Barba</option>
-                    <option>Sobrancelha</option>
-                    <option>Nevou</option>
-                  </select>
-                </div>
-                <div class="col-sm-6">
-                  <label for="data" class="form-label">Data</label>
-                  <input type="date" class="form-control" id="data" required>
-                </div>
-              </div>
-              <div class="mb-4">
-                <label for="hora" class="form-label">Horário</label>
-                <select id="hora" class="form-select" required>
-                  <option value="">Selecione uma data primeiro...</option>
+      <h2>Garanta sua cadeira</h2>
+      <p class="sub mt-3 mb-5">Escolha o serviço, o dia e o horário. A confirmação sai pelo WhatsApp.</p>
+      <div class="row gy-5">
+        <div class="col-lg-7">
+          <form id="bookingForm" class="form-box">
+            <div class="mb-3">
+              <label for="nome" class="form-label">Seu nome</label>
+              <input type="text" class="form-control" id="nome" required placeholder="Ex: Lucas Pereira">
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-sm-7">
+                <label for="servico" class="form-label">Serviço</label>
+                <select id="servico" class="form-select" required>
+                  <option value="">Selecione</option>
+                  <option data-preco="20">Raspagem completa na gilete</option>
+                  <option data-preco="30">Corte simples (máquina)</option>
+                  <option data-preco="35">Corte social</option>
+                  <option data-preco="40">Corte disfarçado</option>
+                  <option data-preco="45">Corte disfarçado + sobrancelha</option>
+                  <option data-preco="60">Corte + barba</option>
+                  <option data-preco="120">Corte + reflexo (nevou)</option>
+                  <option data-preco="10">Acabamento (pezinho)</option>
                 </select>
               </div>
-              <button type="submit" class="btn btn-rust w-100 py-3 text-uppercase fw-bold">Confirmar agendamento</button>
-              <p class="text-dim text-center small mt-2">
-                * Horários sujeitos à confirmação de disponibilidade na agenda do barbeiro.
-              </p>
-              <div class="alert alert-confirm mt-3 d-none" id="confirmMsg"></div>
-            </form>
-          </div>
+              <div class="col-sm-5">
+                <label for="data" class="form-label">Data</label>
+                <input type="date" class="form-control" id="data" required>
+              </div>
+            </div>
+            <label class="form-label">Horário</label>
+            <div class="slots mb-2" id="slots"><p class="sub small m-0">Escolha uma data para ver os horários livres.</p></div>
+            <input type="hidden" id="hora" required>
+            <div class="total mt-3" id="totalLinha"></div>
+            <button type="submit" class="btn btn-w w-100 py-3 mt-3 fw-bold">Confirmar agendamento</button>
+            <p class="sub small text-center mt-2 mb-0">Sujeito à confirmação do barbeiro.</p>
+            <div class="alert-confirm mt-3 d-none" id="confirmMsg" role="status"></div>
+          </form>
         </div>
-
-        <!-- Informações de Contato e Mapa -->
-        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-between">
-          <div class="row g-2 mb-3">
-            <div class="col-6">
-              <div class="info-pill h-100">
-                <div class="fw-semibold small">📍 Endereço</div>
-                <div class="text-dim small mt-1">Rua Castanheiro, 46<br>Magalhães Bastos, RJ</div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="info-pill h-100">
-                <div class="fw-semibold small">🕒 Horários</div>
-                <div class="text-dim small mt-1">Ter a Sáb<br>09h às 19h</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="info-pill d-flex justify-content-between align-items-center">
-                <div>
-                  <div class="fw-semibold small">💬 Dúvidas ou urgência?</div>
-                  <div class="text-dim small">(21) 99035-7750 — WhatsApp</div>
-                </div>
-                <a id="linkWhatsappContato" href="https://wa.me/5521990357750" target="_blank" rel="noopener" class="btn btn-sm btn-outline-bone">Falar</a>
-              </div>
-            </div>
+        <div class="col-lg-5">
+          <div class="map-wrapper mb-2">
+            <iframe src="https://www.google.com/maps?q=Rua+Castanheiro+46+Magalhães+Bastos+Rio+de+Janeiro&output=embed" loading="lazy" allowfullscreen title="Localização da Barbearia Real"></iframe>
           </div>
-
-          <div>
-            <div class="map-wrapper mb-2">
-              <iframe src="https://www.google.com/maps?q=Rua+Castanheiro+46+Magalhães+Bastos+Rio+de+Janeiro&output=embed" loading="lazy" allowfullscreen title="Localização da Barbearia do Feio"></iframe>
-            </div>
-            <div class="text-end">
-              <a href="https://maps.google.com/?q=Rua+Castanheiro+46+Magalhães+Bastos+Rio+de+Janeiro" target="_blank" rel="noopener" class="text-dim small text-decoration-underline">
-                Abrir rota no Google Maps ↗
-              </a>
-            </div>
+          <a href="https://maps.google.com/?q=Rua+Castanheiro+46+Magalhães+Bastos+Rio+de+Janeiro" target="_blank" rel="noopener" class="small text-decoration-underline">Abrir rota no Google Maps</a>
+          <div class="info-pill mt-4 d-flex justify-content-between align-items-center">
+            <div><div class="fw-semibold">Dúvidas ou urgência?</div><div class="sub small">(21) 99035-7750</div></div>
+            <a href="https://wa.me/5521990357750" target="_blank" rel="noopener" class="btn btn-o btn-sm px-3">Falar no WhatsApp</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======================================================== -->
-  <!-- SEÇÃO DE AVALIAÇÕES                                      -->
-  <!-- ======================================================== -->
-  <section class="py-5" id="avaliacoes" style="padding-top:7rem; padding-bottom:7rem;">
+  <!-- AVALIAÇÕES -->
+  <section class="sec light" id="avaliacoes">
     <div class="container">
       <div class="row align-items-end mb-5 gy-3">
-        <div class="col-md-8">
-          <h2 style="font-size:clamp(34px,5vw,52px);">Avaliações</h2>
-        </div>
-        <div class="col-md-4 text-md-end">
-          <span class="stars fs-5">★★★★★</span>
-        </div>
+        <div class="col-md-7"><h2>Avaliações</h2></div>
+        <div class="col-md-5 text-md-end"><span class="stars" id="mediaNotas"></span></div>
       </div>
-
       <div class="row g-3 mb-5" id="reviewList"></div>
-
-      <div class="border-top border-line pt-5">
-        <h3 class="fs-3 fw-semibold mb-4" style="text-transform:none; font-family:'Work Sans';">Deixe sua avaliação</h3>
-        <form id="reviewForm">
-          <div class="d-flex gap-2 mb-3 star-input" id="starInput">
-            <button type="button" class="rounded-1" data-v="1">★</button>
-            <button type="button" class="rounded-1" data-v="2">★</button>
-            <button type="button" class="rounded-1" data-v="3">★</button>
-            <button type="button" class="rounded-1" data-v="4">★</button>
-            <button type="button" class="rounded-1" data-v="5">★</button>
-          </div>
-          <div class="row g-3 mb-3">
-            <div class="col-sm-6">
-              <label for="revNome" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="revNome" required placeholder="Seu nome">
-            </div>
-            <div class="col-sm-6">
-              <label for="revNota" class="form-label">Nota selecionada</label>
-              <input type="text" class="form-control" id="revNota" readonly placeholder="Clique nas estrelas acima">
-            </div>
-          </div>
-          <div class="mb-4">
-            <label for="revTexto" class="form-label">Comentário</label>
-            <input type="text" class="form-control" id="revTexto" required placeholder="Conte como foi seu corte">
-          </div>
-          <button type="submit" class="btn btn-rust w-100 py-3 text-uppercase fw-bold">Enviar avaliação</button>
-        </form>
-      </div>
+      <form id="reviewForm" class="rev-form">
+        <h3 class="fs-4 mb-3">Como foi seu corte?</h3>
+        <div class="d-flex gap-2 mb-3 star-input" id="starInput">
+          <button type="button" data-v="1" aria-label="1 estrela">★</button><button type="button" data-v="2" aria-label="2 estrelas">★</button><button type="button" data-v="3" aria-label="3 estrelas">★</button><button type="button" data-v="4" aria-label="4 estrelas">★</button><button type="button" data-v="5" aria-label="5 estrelas">★</button>
+        </div>
+        <div class="row g-3 mb-3">
+          <div class="col-sm-6"><label for="revNome" class="form-label">Nome</label><input type="text" class="form-control" id="revNome" required placeholder="Seu nome"></div>
+          <div class="col-sm-6"><label for="revNota" class="form-label">Nota</label><input type="text" class="form-control" id="revNota" readonly required placeholder="Toque nas estrelas"></div>
+        </div>
+        <label for="revTexto" class="form-label">Comentário</label>
+        <input type="text" class="form-control mb-4" id="revTexto" required placeholder="Conte como foi">
+        <button type="submit" class="btn btn-k w-100 py-3 fw-bold">Enviar avaliação</button>
+        <div class="alert-confirm mt-3 d-none" id="revMsg" role="status"></div>
+      </form>
     </div>
   </section>
 
-  <!-- ======================================================== -->
-  <!-- RODAPÉ                                                   -->
-  <!-- ======================================================== -->
-  <footer class="py-5">
-    <div class="container">
-      <div class="row gy-4 mb-5">
-        <div class="col-lg-5">
-          <div class="display-font fs-2 mb-2">Barbearia do Feio</div>
-          <p class="text-dim small">Rua Castanheiro, 46<br>Magalhães Bastos — RJ</p>
-        </div>
-        <div class="col-6 col-lg-3">
-          <h6 class="text-dim text-uppercase small mb-3">Navegação</h6>
-          <a href="#servicos">Serviços</a>
-          <a href="#planos">Planos Mensais</a>
-          <a href="#trabalhos">Trabalhos</a>
-          <a href="#agendar">Agendar horário</a>
-          <a href="#avaliacoes">Avaliações</a>
-        </div>
-        <div class="col-6 col-lg-4">
-          <h6 class="text-dim text-uppercase small mb-3">Contato</h6>
-          <a href="https://wa.me/5521990357750" target="_blank" rel="noopener">(21) 99035-7750 — WhatsApp</a>
-          <a href="https://www.instagram.com/matheus_lucianoo21/" target="_blank" rel="noopener">Instagram: @matheus_lucianoo21</a>
-          <p class="text-dim small">Terça a sábado · 09h às 19h</p>
-        </div>
+  <footer class="dark">
+    <div class="checker"></div>
+    <div class="container py-5">
+      <div class="row gy-4 mb-4">
+        <div class="col-lg-5"><div class="brand-f">Barbearia Real</div><p class="sub small mt-2">Rua Castanheiro, 46<br>Magalhães Bastos, RJ</p></div>
+        <div class="col-6 col-lg-3"><div class="k">Navegação</div><a href="#precos">Preços</a><a href="#planos">Planos</a><a href="#trabalhos">Trabalhos</a><a href="#agendar">Agendar</a></div>
+        <div class="col-6 col-lg-4"><div class="k">Contato</div><a href="https://wa.me/5521990357750" target="_blank" rel="noopener">(21) 99035-7750</a><a href="https://www.instagram.com/matheus_lucianoo21/" target="_blank" rel="noopener">@matheus_lucianoo21</a><p class="sub small">Terça a sábado, 09h às 19h</p></div>
       </div>
-      <div class="border-top border-line pt-4 d-flex justify-content-between flex-wrap gap-2 small text-dim">
-        <span>© <span id="year"></span> Barbearia do Feio</span>
-        <span>Site desenvolvido por Rafael Alves</span>
+      <div class="d-flex justify-content-between flex-wrap gap-2 small sub pt-3 foot-line">
+        <span>© <span id="year"></span> Barbearia Real</span><span>Site desenvolvido por Rafael Alves</span>
       </div>
     </div>
   </footer>
 
-  <!-- ======================================================== -->
-  <!-- MODAL DE ADESÃO AO PLANO MENSAL                          -->
-  <!-- ======================================================== -->
   <div class="modal fade" id="modalPlano" tabindex="-1" aria-labelledby="modalPlanoLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-charcoal border border-line text-white">
-        <div class="modal-header border-bottom border-line">
-          <h5 class="modal-title display-font fs-4" id="modalPlanoLabel">Assinar Plano Mensal</h5>
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="modalPlanoLabel">Assinar plano mensal</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </div>
-        <div class="modal-body">
-          <p class="text-dim small mb-4">Ao confirmar, o seu pedido será aberto diretamente no WhatsApp do barbeiro para ativar a sua assinatura.</p>
+        <div class="modal-body pt-0">
+          <p class="sub small mb-4">Ao confirmar, abrimos o WhatsApp do barbeiro com o seu pedido pronto.</p>
           <form id="formAssinaturaPlano">
-            <div class="mb-3">
-              <label class="form-label">Plano Selecionado</label>
-              <input type="text" class="form-control fw-bold" id="inputPlanoNome" readonly>
-            </div>
-            <div class="mb-3">
-              <label for="inputAssinanteNome" class="form-label">Seu Nome</label>
-              <input type="text" class="form-control" id="inputAssinanteNome" required placeholder="Ex: Rodrigo Silva">
-            </div>
-            <div class="mb-4">
-              <label for="inputAssinanteTel" class="form-label">Seu WhatsApp</label>
-              <input type="tel" class="form-control" id="inputAssinanteTel" required placeholder="Ex: (21) 98888-7777">
-            </div>
-            <button type="submit" class="btn btn-rust w-100 py-3 text-uppercase fw-bold">
-              Confirmar e Chamar no WhatsApp ↗
-            </button>
+            <div class="mb-3"><label class="form-label">Plano escolhido</label><input type="text" class="form-control fw-bold" id="inputPlanoNome" readonly></div>
+            <div class="mb-3"><label for="inputAssinanteNome" class="form-label">Seu nome</label><input type="text" class="form-control" id="inputAssinanteNome" required placeholder="Ex: Rodrigo Silva"></div>
+            <div class="mb-4"><label for="inputAssinanteTel" class="form-label">Seu WhatsApp</label><input type="tel" class="form-control" id="inputAssinanteTel" required placeholder="Ex: (21) 98888-7777"></div>
+            <button type="submit" class="btn btn-w w-100 py-3 fw-bold">Confirmar e chamar no WhatsApp</button>
           </form>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ======================================================== -->
-  <!-- CARREGAMENTO DOS SCRIPTS                                 -->
-  <!-- ======================================================== -->
-  <!-- Bootstrap 5 JavaScript para funcionamento do menu e modal -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Arquivo de Lógica do Projeto -->
   <script src="script.js"></script>
 </body>
 </html>
